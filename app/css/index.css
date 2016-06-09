@@ -1,0 +1,260 @@
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../fonts/Montserrat-Regular.eot');
+  src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+       url('../fonts/Montserrat-Regular.woff') format('woff'),
+       url('../fonts/Montserrat-Regular.ttf') format('truetype'),
+       url('../fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg'),
+       url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Montserrat-Regular'!important;
+  text-transform: uppercase;
+  background-color: #C6DEC6!important;
+}
+
+nav {
+
+}
+nav .navbar {
+  background-color: #E4F6E4;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+nav .container-fluid {
+  background-color: #E4F6E4;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+
+/* .row.content {height: 600px}*/
+
+/* Set gray background color and 100% height */
+.sidenav {
+  position: absolute;
+  background-color: #E4F6E4;
+  max-width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+.sidenav nav .nav-pills .nav-stacked{
+  margin-top: 50px;
+  text-color: #528460;
+}
+.sidenav h2{
+  position: relative;
+  margin-right: 500px;
+  align-items: center;
+}
+/* On small screens, set height to 'auto' for the grid */
+@media screen and (max-width: 767px) {
+  .row.content {height: auto;}
+  .sidenav {height: auto;}
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 0!important; /* Location of the box */
+    max-width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #E4F6E4;;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Add Animation */
+/*@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}*/
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.modal-body {
+  padding: 2px 16px;
+  background-color: #E4F6E4;
+  color: #2D6852;
+}
+
+
+.modal-header, .close {
+    background-color: #C6DEC6;
+    color: #2D6852 !important;
+    text-align: center;
+    font-size: 30px;
+}
+.modal-footer {
+    background-color: #C6DEC6;
+    color: #2D6852;
+}
+.modal-dialog {
+
+}
+/* Style The Dropdown Button */
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position:ab relative;
+    display: inline-block;
+    float: right;
+    margin-top:10px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    border-color: #E8FEFF;
+    z-index: 999;
+    display: none;
+    position: absolute;
+    background-color: #E4F6E4;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    z-index: 100;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-color: #528468;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+
+    right: 12px;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .burger-menu {
+  color: white;
+}
+.burger-menu{
+  color: #77B09B;
+}
+.nav-pills{
+  margin-top: 20px;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #fff;
+    background-color: #77B09B!important;
+    border-color: #C7E8DC;
+    color: white;
+}
+
+.nav-pills>li>a {
+    border-radius: 4px;
+    color: #355E4F;
+    background-color: #C6DEC6!important;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    border-color: #C7E8DC;
+}
+
+.nav-pills>li>a {
+    border-radius: 4px;
+}
+
+.well {
+  background-color: #E4F6E4!important;
+  color: #355E4F!important;
+  margin-top: 10px!important;
+  margin-bottom: 10px!important;
+  padding-top: none!important;
+  align-items: center;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.btn {
+  box-shadow: none!important;
+}
+#loginButton
+{
+  color: #528460;
+  border-radius: 10px;
+  color: #355E4F;
+  background-color: #C6DEC6!important;
+  box-shadow: 0px 0px 0px 0px !important;
+  padding: 8px;
+  border: 0 none;
+}
+#loginButton:hover,
+ #loginButton:focus
+{
+	color: white!important;
+	background-color: #E4F6E4!!important;
+	outline: 0;
+}
+.pager>li>a
+{
+   color: #528460;
+   width: 150px;
+}
+.pager>li>a:hover,.pager>li>a:active
+{
+   background-color: #77B09B;
+}

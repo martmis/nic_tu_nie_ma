@@ -1,0 +1,1 @@
+INSERT INTO klienci SET idklienta=NULL, imie="Steve", nazwisko="McQueen", miejscowosc="New York"

@@ -22,16 +22,10 @@
 			<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
 			<div class="btn btn-default btn-file">
 				<span>Upload</span>
-				<input id="uploadBtn" type="file" class="upload" name="plik" required/>
+				<input id="uploadBtn" type="file" class="upload" multiple name="plik[]" required/>
 			</div>
 			<br><br><br><input type="submit" value="Wyślij plik"/>
 
-			<?php 
-				if(isset($_SESSION['total_time'])){
-				echo 'Wysłanie pliku zrealizowano w:  '.$_SESSION['total_time'].' sekundy<br><br>';
-				echo 'Plik <b>'.$_SESSION['file_name'].'</b> został dodany do rejestru badań';}
-				
-			?>
 		</form>
       </div>
     </div>

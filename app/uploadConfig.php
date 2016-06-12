@@ -5,8 +5,8 @@
 
 	//dot łączenia z bazą danych
 	$host = "mysql.agh.edu.pl";
-	$db_user = "kuna2";
-	$db_password = "hTBAF7XR";
-	$db_name = "kuna2";
+	$db_user = "kincur2";
+	$db_password = "jQKBErcw";
+	$db_name = "kincur2";
 	
 ?>

@@ -1,5 +1,7 @@
 
 <?php
+session_start();
+
 if(isset($_POST['imie']))
 {			
 	/*
@@ -110,7 +112,7 @@ if(isset($_POST['imie']))
 				{	
 					$match = $sql_answer->num_rows;
 					if($match>0) //jeśli znaleziono co najmniej jeden rekord
-					{
+					{ 
 						while ($row = $sql_answer-> fetch_assoc()) 
 						{	
 							$dir = dir($target); //zmienna wstazująca miejsce odczytu -> link do servera i folderu na nim
@@ -119,20 +121,26 @@ if(isset($_POST['imie']))
 								if($file != '.' && $file != '..') 
 								{
 									if($row['data_file']==$file) //jeśli nazwa pliku wczytana z tablicy asocjacyjnej jest taka sama co pliku na serw to break
-									{
-										$location='<a href="data/'.$file.'"'.">".$file."</a>";  //link do przepisania na zmienną jakby coś z nią było robić
+									{	
+										$_SESSION['location']='<a href="data/'.$file.'"'.">".$file."</a>";  //link do przepisania na zmienną jakby coś z nią było robić
+										$_SESSION['nazwa']='proba'; //przepisuje nazwe do zmienne sesyjnej 
 										//wypisanie całości danych -> można z tego zrobić tabelę, ale to kwestia stylu i wrzucenia divów
 										echo "Imię: ".$row['imie']."</br>";
 										echo "Nazwisko: ".$row['nazwisko']."</br>";
-										echo "Pesel: ".$row['pesel']."</br>";
+										echo "Pesel: ".$row['pesel']."</br>"; 
 										echo "Płeć: ".$row['plec']."</br>";
 										echo "Data: ".$row['data']."</br>";
-										echo "Typ badania: ". $row['typ']."</br>";
-										echo "Pobierz plik: ".$location."</br></br></br>";
+										echo "Typ badania: ". $row['typ']."</br>"; ?>
+										<form action="wykres.php" method="POST">
+										 <input type="hidden" name="nazwa" value="<?php echo $file; ?>"> 
+										<input type="submit" value="WYKRES">
+										</form>
+<?php
+										echo "Pobierz plik: ".$_SESSION['location']."</br></br></br>";
 										break;
-									}
+									} 
 								}
-							}
+							} 
 						}
 						$dir->close();		//zamykanie rejestru z plikami
 						$sql_answer->free_result(); //czyszczenie wyniku

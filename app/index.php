@@ -1,4 +1,5 @@
 <?php
+	session_start(); 
 	require_once "header.php";
 ?>
 <div class="container-fluid" id = "parentContainer" >
@@ -19,5 +20,6 @@
     </div>
 	
 <?php
+	$_SESSION['proba']="proba" ;
 	require_once "footer.php"
 ?>
